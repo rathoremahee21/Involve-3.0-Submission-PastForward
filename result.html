@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decision Outcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="page">
+    <div class="content {{ outcome.result_type }}">
+        <h1>Decision Outcome</h1>
+
+        <h3>Short-Term Impact</h3>
+        <p>{{ outcome.short_term }}</p>
+
+        <h3>Long-Term Impact</h3>
+        <p>{{ outcome.long_term }}</p>
+
+        <h3>Historical Comparison</h3>
+        {% if outcome.historical_match %}
+            <p>Your decision aligns with Maharana Pratap’s historical choice.</p>
+        {% else %}
+            <p>Your decision differs from Maharana Pratap’s historical choice.</p>
+        {% endif %}
+
+        <h3>Life Lesson</h3>
+        <p>{{ outcome.lesson }}</p>
+
+        <hr>
+        <p><em>{{ disclaimer }}</em></p>
+    </div>
+</div>
+</body>
+</html>
