@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Make Your Decision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="page">
+    <div class="content">
+        <h1>Choose Your Path</h1>
+
+        <form action="/result" method="post">
+            {% for key, option in options.items() %}
+                <div class="option">
+                    <input type="radio" name="choice" value="{{ key }}" required>
+                    {{ option.text }}
+                </div>
+            {% endfor %}
+
+            <button type="submit">Submit Decision</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* -------------------- Body -------------------- */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f3e8dc; /* parchment look */
+    color: #3e2f1c;
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(
+        rgba(100, 60, 20, 0.05) 1px,
+        transparent 1px
+    );
+    background-size: 10px 10px;
+}
+
+/* -------------------- Page -------------------- */
+.page {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* -------------------- Content Panel -------------------- */
+.content {
+    width: 80%;
+    padding: 50px;
+    background: linear-gradient(to bottom, #fff4e0, #f3e2c4);
+    border: 3px solid #b88b5d;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+}
+
+/* -------------------- Headings -------------------- */
+h1 {
+    color: #8b5a2b;
+    border-bottom: 3px double #b88b5d;
+    padding-bottom: 12px;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+}
+
+h2, h3 {
+    color: #6e3f1a;
+    margin-top: 20px;
+}
+
+/* -------------------- Blockquote -------------------- */
+blockquote {
+    background: #f9f0d8;
+    padding: 25px;
+    border-left: 8px solid #b88b5d;
+    font-style: italic;
+    font-size: 1.1em;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+/* -------------------- Option Boxes -------------------- */
+.option {
+    background: #fdf3e4;
+    border-left: 6px solid #b88b5d;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-size: 1.05em;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.option:hover {
+    background: #f8e6c9;
+    transform: translateX(4px);
+}
+
+/* -------------------- Buttons -------------------- */
+button {
+    background: linear-gradient(to right, #b88b5d, #8b5a2b);
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #a0784f, #7a4520);
+    transform: scale(1.05);
+}
+
+/* -------------------- Horizontal Rule -------------------- */
+hr {
+    border: none;
+    border-top: 2px dotted #b88b5d;
+    margin: 30px 0;
+}
+
+/* -------------------- Disclaimer -------------------- */
+p em {
+    color: #5c3d1a;
+    font-size: 0.95em;
+}
+
+/* -------------------- Historical Decision Panels -------------------- */
+.accept_supremacy {
+    border-color: #a66a50;
+    background: linear-gradient(to bottom, #fff2e0, #f0d9c0);
+}
+
+.open_battle {
+    border-color: #8b3d2f;
+    background: linear-gradient(to bottom, #fff0e0, #f2c6b0);
+}
+
+.guerrilla_warfare {
+    border-color: #5c4f2a;
+    background: linear-gradient(to bottom, #f4f5dc, #dfe2b0);
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 900px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 95%;
+        padding: 30px;
+    }
+}
